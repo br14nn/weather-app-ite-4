@@ -10,12 +10,15 @@
     <main>
       <img src="<%=flag%>" width="100" height="100" alt="country flag" />
       <h1><%=location%> Weather Forecast</h1>
+      <h4><strong>Current Wind Speed:</strong> <%=windSpeed%></h4>
+      <h4><strong>Current Humidity:</strong> <%=humidity%></h4>
       <table class="table table-hover">
         <thead class="bg-primary">
           <tr>
             <th scope="col">Day</th>
             <th scope="col">Date</th>
             <th scope="col">Weather</th>
+            <th scope="col">Icon</th>
           </tr>
         </thead>
         <tbody>
@@ -29,10 +32,16 @@
 
             <td><%=forecast[i].date%></td>
             <td><%=forecast[i].skytextday%></td>
+            <td>
+              <img src="<%=weatherIcons[i]%>" alt="weather icon" />              
+            </td>
           </tr>
           <% } %>
         </tbody>
       </table>
+      <footer class="bg-primary">
+       <p class="footer-text">Coded by: Brian V. Vitualla</p>
+      </footer>
     </main>
   </body>
 </html>
